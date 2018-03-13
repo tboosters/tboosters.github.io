@@ -25,7 +25,6 @@
             </div>
 
             <div id="mdm" class="tabcontent">
-                <img id="mdm-img" src=""></img>
                 <p>
                     iClass Android Mobile Device Management (MDM) System was the main project in which I researched, designed and developed a server backend, a simple frontend webpage and an Android device policy controller app during my internship period in ITWakes Ltd. The system is now under further polishing and development by my ex-colleagues (many thanks to them!) and will be released soon.
                 </p>
@@ -59,13 +58,16 @@
                         <li>Became one of the 40 international business partners of Google in the field of Enterprise Mobility Management</li>
                     </ul>
                 </p>
+                <img src="image/mdm_console_1.png">
+                <img src="image/mdm_console_2.png">
                 <p>
+                    <br>
                     <b>Technology Stack</b>
                     <ul>
                         <li>
                             <a href="https://play.google.com/store/apps/details?id=itwakes.dpc">Android Device Policy Controller (DPC)</a>
                             <br>
-                            The app performs 2 main tasks, namely device provisioning and device management: It provisions the device by exchanging information with the backend server, which delegates the provision request to Google, through HTTP requests. The device policies are then pushed to the device from the management backend by push messages, the controller decodes the message and perform respectively.
+                            The app performs 2 main tasks, namely device provisioning and device management: It provisions the device by exchanging information with the backend server, which delegates the provision request to Google, through HTTP requests. The device policies are then pushed to the device from the management backend by push messages, the controller decodes the message and perform the tasks accordingly.
                             <ul>
                                 <li>Programming Language: Java</li>
                                 <li>Layouts: XML</li>
@@ -106,10 +108,149 @@
                 </p>
             </div>
             <div id="pcs" class="tabcontent">
+                <p>
+                    iClass iPad Parental Control System (PCS) is a companion app for the iPad MDM system of ITWakes Ltd. This was a side-projectz in which I worked closely with the backend engineer of the iPad MDM system, during my internship period at ITWakes Ltd.
+                    <br>
+                    <img src="image/pcs_2.png" class="pcs right">
+                    <b>The app is now on <a href="https://play.google.com/store/apps/details?id=itwakes.pcs">Google Play Store</a></b>
+                </p>
+                <p>
+                    <b>System features</b>
+                    <ul>
+                        <li>Display device information of the user's managed iPads</li>
+                        <li>Display and filter installed apps of the iPad</li>
+                        <li>Schedule device locks</li>
+                        <li>Issue commands to clear device passcode</li>
+                        <li>Manage multiple devices at the same time</li>
+                        <li>Support for multiple locale</li>
+                    </ul>
+                </p>
+                <p>
+                    <br>
+                    <br>
+                    <b>Technology Stack</b>
+                    <br>
+                        The app works with a backend API for sending requests and retrieving data. Self-implemented a JSONDownloader class for loading JSON data by sending requests to the backend. Used the external Glide library for image caching, resizing and reshaping in the Installed App fragment.
+                        <ul>
+                            <li>Programming Language: Java</li>
+                            <li>Layouts: XML</li>
+                            <li>External Libraries used: <a href="https://github.com/bumptech/glide/">Glide</a></li>
+                        </ul>
+                </p>
             </div>
             <div id="tutoria" class="tabcontent">
+                Tutoria is a class group project I had in the Software Engineering course. This is a web app which aims to facilitate the efficiency of organizing tutorial classes by computerizing tutor booking system, fee transactions etc.
+                <br>
+                I was mainly responsible for the backend development and occasionally some frontend components.
+                <p>
+                    <b>Technology Stack</b>
+                    <br>
+                    The project mainly adopts a MTV model, which is employed in the Django framework. All model (M) class logic is separated from the view (V) classes which mainly serve as API endpoints and the templates (T) which mainly defines the layout of the webpage frontends.
+                    <br>
+                    A server response standard is employed in the backend development to facilitate efficient in end-to-end communicatino within the system.
+                    <ul>
+                        <li>
+                            Backend
+                            <ul>
+                                <li>Server scripting: Python3 in Django framework</li>
+                                <li>Database: SQLite with database interfaces provided by Django</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Frontend
+                            <ul>
+                                <li>HTML</li>
+                                <li>Basic Styling and layout: CSS</li>
+                                <li>AJAX requests and data handling: Javascript, jQuery</li>
+                            </ul>
+                        </li>
+                        <li>Version Control System: Git</li>
+                    </ul>
+                </p>
+                <p>
+                    Source code is available on <a href="https://github.com/tboosters/tutoria">Github</a>
+                </p>
             </div>
             <div id="program" class="tabcontent">
+                Here are some small program I wrote in my leisure time, some of them are for solving problems on online judges.
+                <ul>
+                    <li>
+                        <b>8Queen problem</b>
+                        <br>
+                        <ul>
+                            <li>
+                                <a href="code/8queen.cpp">Source code</a>
+                            </li>
+                            <li>
+                                Written in C++
+                            </li>
+                            <li>
+                                Make use of backtracking in the search for solutions - backtrack when the current route does not work.
+                            </li>
+                            <li>
+                                Use 1-D array as the data structure for storing the chessboard - eliminate the need for checking attack on the same column
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <b>The Maze Makers</b>
+                        This is a problem from ACM/ICPC Live Archive - <a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4829">6817 - The Maze Makers</a>, which requires the program to decide whether the input maze is valid.
+                        <br>
+                        A valid maze:
+                        <ol>
+                            <li>has exactly 2 entrance / exit cells</li>
+                            <li>any cell can be reached from any other cell</li>
+                            <li>has exactly 1 simple path as the solution</li>
+                        </ol>
+                        <br>
+                        <ul>
+                            <li>
+                                <a href="code/maze.cpp">Source code</a>
+                            </li>
+                            <li>
+                                Written in C++
+                            </li>
+                            <li>
+                                Made use of Breadth-First Search for route searching.
+                            </li>
+                            <li>
+                                Made use of bit-wise operation for determining cell type and connectivity.
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <b>Othello</b>
+                        <br>
+                        An Othello game featuring AI player and GUI
+                        <br>
+                        <ul>
+                            <li>
+                                <a href="code/Othello.zip">Source code</a>
+                            </li>
+                            <li>
+                                Written in Python3, used tkinter for GUI development
+                            </li>
+                            <li>
+                                Made use of an Iterative Deepening Search for expanding the game tree while controlling the depth of moves explored to prevent the player from waiting too long.
+                            </li>
+                            <li>
+                                Made use of Alpha-Beta Pruning for pruning branches with non-feasible heuristics for the AI.
+                            </li>
+                            <li>
+                                Designed the heuristics for calculating the score of each state as:
+                                <pre>
+                                    Piece difference + Corner Occupation + Corner Closeness + Mobility
+                                </pre>
+                                with higher weighting on corner occupation and mobility.
+                            </li>
+                            <li>
+                                Features a GUI for player to interact with the chessboard directly and sees the latest count of chesses
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </body>
