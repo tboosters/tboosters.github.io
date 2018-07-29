@@ -71,41 +71,17 @@
                             <a href="https://play.google.com/store/apps/details?id=itwakes.dpc">Android Device Policy Controller (DPC)</a>
                             <br>
                             The app performs 2 main tasks, namely device provisioning and device management: It provisions the device by exchanging information with the backend server, which delegates the provision request to Google, through HTTP requests. The device policies are then pushed to the device from the management backend by push messages, the controller decodes the message and perform the tasks accordingly.
-                            <ul>
-                                <li>Programming Language: Java</li>
-                                <li>Layouts: XML</li>
-                                <li>External Libraries used: <a href="https://developers.google.com/android/work/dpc/build-dpc#dpc_support_library">Google DPC Support Library</a>, <a href="http://square.github.io/retrofit/">Retrofit</a>, <a href="https://firebase.google.com/docs/cloud-messaging/">Google Firebase Cloud Messaging</a></li>
-                            </ul>
                         </li>
                         <li>
                             Backend
                             <br>
                             Rather than rendering webpages with dynamic content on the server, the backend mainly serves as an API server providing endpoints for the clients like the frontend and the device manager to call. This isolates the design of the frontend from the backend and allows more efficient division of labour by letting the frontend engineer to take charge.
                             It also acts as a proxy to delegate valid user requests to the Google EMM API for app management actions.
-                            <br>
-                            I also employed some kind of JSON response format standard in all API responses to make cooperation between backend and frontend easier, sample:
-                            <pre>
-                                {
-                                    "errno": 0,
-                                    "msg": "Success!",
-                                    "data": "{"id":1, "text":"test"}"
-                                }
-                            </pre>
-                            <ul>
-                                <li>Server-side scripting: PHP5 in FuelPHP framework</li>
-                                <li>Database: MySQL</li>
-                                <li>External APIs used: <a href="https://developers.google.com/android/work/">Google Android Enterprise Mobility Management API</a>, <a href="https://firebase.google.com/docs/cloud-messaging/">Google Firebase Cloud Messaging</a></li>
-                            </ul>
                         </li>
                         <li>
                             Frontend
                             <br>
                             In order to demonstrate and test the functions we implemented, I also developed a skeleton SPA frontend.
-                            <ul>
-                                <li>HTML</li>
-                                <li>Basic styling for the SPA layout: CSS</li>
-                                <li>AJAX requests and live data handling: Javascript</li>
-                            </ul>
                         </li>
                     </ul>
                 </p>
@@ -133,12 +109,7 @@
                     <br>
                     <b>Technology Stack</b>
                     <br>
-                        The app works with a backend API for sending requests and retrieving data. Self-implemented a JSONDownloader class for loading JSON data by sending requests to the backend. Used the external Glide library for image caching, resizing and reshaping in the Installed App fragment.
-                        <ul>
-                            <li>Programming Language: Java</li>
-                            <li>Layouts: XML</li>
-                            <li>External Libraries used: <a href="https://github.com/bumptech/glide/">Glide</a></li>
-                        </ul>
+                    The app works with a backend API for sending requests and retrieving data. Self-implemented a JSONDownloader class for loading JSON data by sending requests to the backend. Used the external Glide library for image caching, resizing and reshaping in the Installed App fragment.
                 </p>
             </div>
             <div id="tutoria" class="tabcontent">
